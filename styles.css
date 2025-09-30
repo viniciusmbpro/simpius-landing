@@ -1,0 +1,133 @@
+/* Estilos adicionais e otimizações para o Simpius Landing Page */
+
+/* Melhorias de performance e acessibilidade */
+.logo {
+    will-change: transform;
+}
+
+.submit-btn {
+    will-change: transform;
+}
+
+/* Estados de loading */
+.submit-btn.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.submit-btn.loading::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Melhorias de acessibilidade */
+.email-input:focus {
+    outline: 2px solid #0B1F3A;
+    outline-offset: 2px;
+}
+
+.submit-btn:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* Estados de erro */
+.email-form.error {
+    border-color: #e53e3e;
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+.error-message {
+    display: none;
+    background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-top: 12px;
+    font-size: 14px;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* Melhorias para dark mode (opcional) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        color: #e2e8f0;
+    }
+    
+    .hero h1 {
+        background: linear-gradient(135deg, #ffffff 0%, #cbd5e0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .hero h2 {
+        color: #a0aec0;
+    }
+    
+    .manifesto {
+        background: rgba(26, 32, 44, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .manifesto h2 {
+        color: #ffffff;
+    }
+    
+    .manifesto p {
+        color: #cbd5e0;
+    }
+    
+    .highlight {
+        color: #90cdf4;
+    }
+    
+    .email-form {
+        background: rgba(26, 32, 44, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .email-input {
+        color: #e2e8f0;
+    }
+    
+    .email-input::placeholder {
+        color: #718096;
+    }
+}
+
+/* Animações extras para interatividade */
+.manifesto:hover {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease;
+}
+
+/* Otimizações para impressão */
+@media print {
+    .email-form,
+    .submit-btn {
+        display: none;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+}

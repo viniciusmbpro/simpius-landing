@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simpius - Seu reino intelectual, finalmente em ordem</title>
+    <meta name="description" content="Simpius é o framework ativo que transforma seu conhecimento em resultados. Uma nova era para o seu segundo cérebro está chegando.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset e configurações básicas */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #111111;
+            background: linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            padding: 60px 0 40px;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin: 0 auto 40px;
+            display: block;
+            filter: drop-shadow(0 4px 20px rgba(11, 31, 58, 0.1));
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        /* Seção Hero */
+        .hero {
+            text-align: center;
+            padding: 0 0 80px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #0B1F3A 0%, #1a3a5c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero h2 {
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            font-weight: 400;
+            color: #4a5568;
+            margin-bottom: 48px;
+            line-height: 1.5;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        /* Formulário de email */
+        .email-form {
+            background: white;
+            padding: 8px;
+            border-radius: 60px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #e2e8f0;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+            transition: all 0.3s ease;
+        }
+
+        .email-form:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .email-form:focus-within {
+            box-shadow: 0 0 0 3px rgba(11, 31, 58, 0.1);
+        }
+
+        .email-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            padding: 16px 24px;
+            background: transparent;
+            color: #2d3748;
+        }
+
+        .email-input::placeholder {
+            color: #a0aec0;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #0B1F3A 0%, #1a3a5c 100%);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(11, 31, 58, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Texto de confiança */
+        .trust-text {
+            font-size: 14px;
+            color: #718096;
+            font-style: italic;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        /* Seção do manifesto */
+        .manifesto {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 60px 40px;
+            margin: 80px auto;
+            max-width: 900px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .manifesto h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 600;
+            margin-bottom: 32px;
+            color: #0B1F3A;
+            text-align: center;
+        }
+
+        .manifesto p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #4a5568;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #0B1F3A;
+        }
+
+        /* Rodapé */
+        .footer {
+            padding: 60px 0 40px;
+            text-align: center;
+            animation: fadeIn 1s ease-out 1s both;
+        }
+
+        .footer p {
+            color: #718096;
+            font-size: 14px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero {
+                padding: 0 0 60px;
+            }
+
+            .manifesto {
+                padding: 40px 24px;
+                margin: 60px auto;
+            }
+
+            .email-form {
+                flex-direction: column;
+                padding: 16px;
+                border-radius: 20px;
+            }
+
+            .submit-btn {
+                align-self: stretch;
+            }
+        }
+
+        /* Elementos decorativos */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(11, 31, 58, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .main-content {
+            position: relative;
+        }
+
+        /* Estados de sucesso */
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-weight: 500;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="container">
+            <!-- Header com Logo -->
+            <header class="header">
+                <img src="logo_simpius_v1.svg" alt="Simpius" class="logo">
+            </header>
+
+            <!-- Seção Hero -->
+            <section class="hero">
+                <h1>Seu reino intelectual, finalmente em ordem.</h1>
+                <h2>Simpius é o framework ativo que transforma seu conhecimento em resultados. Uma nova era para o seu segundo cérebro está chegando.</h2>
+                
+                <!-- Formulário de Email -->
+                <form class="email-form" id="emailForm">
+                    <input 
+                        type="email" 
+                        class="email-input" 
+                        placeholder="seu-melhor@email.com"
+                        required
+                        id="emailInput"
+                    >
+                    <button type="submit" class="submit-btn">
+                        Quero Acesso Antecipado
+                    </button>
+                </form>
+                
+                <p class="trust-text">Junte-se à nossa lista de pioneiros. Sem spam, apenas insights sobre o lançamento.</p>
+                
+                <div class="success-message" id="successMessage">
+                    ✨ Perfeito! Você está na nossa lista de pioneiros. Em breve você receberá novidades exclusivas.
+                </div>
+            </section>
+
+            <!-- Seção do Manifesto -->
+            <section class="manifesto">
+                <h2>Cansado do esforço desperdiçado?</h2>
+                <p>
+                    Horas acumulando conhecimento, projetos iniciados e nunca terminados, a frustração com ferramentas genéricas que exigem mais configuração do que geram resultados. Nós entendemos essa dor. Simpius foi criado para ser o oposto: uma solução de <span class="highlight">input rápido</span> que <span class="highlight">conecta seus pontos</span> e devolve a você o bem mais precioso: <span class="highlight">a paz de espírito de quem está no controle.</span>
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Simpius. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Funcionalidade do formulário
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const emailInput = document.getElementById('emailInput');
+            const successMessage = document.getElementById('successMessage');
+            const email = emailInput.value;
+            
+            // Validação básica
+            if (email && isValidEmail(email)) {
+                // Simular envio (aqui você integraria com seu backend)
+                console.log('Email capturado:', email);
+                
+                // Mostrar mensagem de sucesso
+                successMessage.classList.add('show');
+                
+                // Limpar o formulário
+                emailInput.value = '';
+                
+                // Esconder a mensagem após 5 segundos
+                setTimeout(() => {
+                    successMessage.classList.remove('show');
+                }, 5000);
+                
+                // Aqui você pode integrar com serviços como:
+                // - Mailchimp
+                // - ConvertKit  
+                // - Seu próprio backend
+                // - Google Sheets
+                // Exemplo: sendToMailchimp(email);
+            }
+        });
+        
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        // Animação suave ao carregar
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '1';
+        });
+        
+        // Efeito parallax sutil
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero::before');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
