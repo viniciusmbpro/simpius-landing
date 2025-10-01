@@ -69,8 +69,11 @@ export default function EmailForm() {
 
       {showSuccess && (
         <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white p-4 rounded-2xl shadow-lg animate-fade-in-up">
-          <p className="font-medium text-center">
+          <p className="font-medium text-center mb-2">
             ✨ Perfeito! Você está na nossa lista de pioneiros. Em breve você receberá novidades exclusivas.
+          </p>
+          <p className="text-sm text-center text-emerald-100">
+            Dúvidas? Entre em contato: <a href="mailto:support@simpius.com" className="underline hover:text-white">support@simpius.com</a>
           </p>
         </div>
       )}

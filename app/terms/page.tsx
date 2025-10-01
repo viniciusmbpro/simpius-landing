@@ -316,8 +316,28 @@ export default function TermsOfUse() {
             ))}
           </div>
 
+          {/* Contact Section */}
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center mt-12">
+            <h3 className="text-lg font-semibold text-slate-900 mb-2">
+              {currentLang === 'pt' && 'Dúvidas sobre estes termos?'}
+              {currentLang === 'en' && 'Questions about these terms?'}
+              {currentLang === 'es' && '¿Preguntas sobre estos términos?'}
+            </h3>
+            <p className="text-slate-600 mb-3">
+              {currentLang === 'pt' && 'Entre em contato conosco:'}
+              {currentLang === 'en' && 'Contact us:'}
+              {currentLang === 'es' && 'Contáctanos:'}
+            </p>
+            <a 
+              href="mailto:support@simpius.com" 
+              className="inline-flex items-center bg-slate-900 text-white px-6 py-3 rounded-full font-medium hover:bg-slate-800 transition-colors"
+            >
+              support@simpius.com
+            </a>
+          </div>
+
           {/* Last Updated */}
-          <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center mt-12">
+          <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center mt-8">
             <p className="text-emerald-700 font-medium">
               {t.lastUpdated}
             </p>
