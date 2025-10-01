@@ -1,169 +1,157 @@
-# Simpius Landing Page
+# Simpius - Next.js Project
 
-Uma landing page moderna e elegante para o Simpius - framework ativo que transforma conhecimento em resultados.
+Versão profissional do site Simpius convertida para Next.js com React, TypeScript e Tailwind CSS.
 
 ## 🚀 Características
 
-- **Design Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
-- **Animações Suaves**: Transições e efeitos visuais elegantes
-- **Formulário Inteligente**: Validação em tempo real e estados de loading
-- **Acessibilidade**: Otimizada para leitores de tela e navegação por teclado
-- **Performance**: Carregamento rápido e otimizado
-- **Dark Mode**: Suporte automático ao tema do sistema
-- **Analytics Ready**: Preparado para Google Analytics e Facebook Pixel
+- **Next.js 15** com App Router
+- **TypeScript** para type safety
+- **Tailwind CSS** para styling responsivo
+- **Componentes React** reutilizáveis
+- **Roteamento profissional** com páginas dedicadas
+- **Suporte multilíngue** (PT/EN/ES)
+- **Design responsivo** com glassmorphism
+- **SEO otimizado** com metadados completos
 
-## 📁 Estrutura dos Arquivos
+## 📁 Estrutura do Projeto
 
 ```
-simpius-landing/
-├── index.html          # Página principal
-├── styles.css          # Estilos adicionais
-├── script.js           # Funcionalidades JavaScript
-├── logo_simpius_v1.svg # Logo principal
-├── icon_simpius_v1.svg # Ícone alternativo
-├── logo_simpius_v1.png # Logo em PNG
-└── README.md           # Este arquivo
+nextjs-simpius/
+├── app/                    # App Router (Next.js 13+)
+│   ├── layout.tsx         # Layout principal
+│   ├── page.tsx           # Página inicial
+│   ├── globals.css        # Estilos globais
+│   ├── privacy/           # Página de Privacidade
+│   │   └── page.tsx
+│   └── terms/             # Página de Termos
+│       └── page.tsx
+├── components/            # Componentes React
+│   ├── Header.tsx        # Cabeçalho com navegação
+│   ├── Footer.tsx        # Rodapé
+│   └── EmailForm.tsx     # Formulário de email
+├── public/               # Assets estáticos
+│   ├── *.png            # Logos e ícones
+│   ├── *.svg            # Vetores
+│   └── favicon.ico      # Favicon
+└── package.json         # Dependências
 ```
 
-## 🎨 Personalização
+## 🛠️ Comandos
 
-### Cores Principais
-- **Azul Profundo**: `#0B1F3A` (cor principal da marca)
-- **Azul Secundário**: `#1a3a5c`
-- **Texto Principal**: `#111111`
-- **Texto Secundário**: `#4a5568`
+### Desenvolvimento
+```bash
+npm run dev
+```
+Inicia o servidor de desenvolvimento em http://localhost:3000
+
+### Build
+```bash
+npm run build
+```
+Cria uma build otimizada para produção
+
+### Lint
+```bash
+npm run lint
+```
+Executa o linter para verificar problemas no código
+
+## 📄 Páginas
+
+### Página Principal (/)
+- Hero section com logo e call-to-action
+- Manifesto da empresa
+- Formulário de captura de email
+- Design responsivo com animações
+
+### Página de Privacidade (/privacy)
+- Política de privacidade completa
+- Suporte a 3 idiomas (PT/EN/ES)
+- Navegação por seções
+- Interface profissional
+
+### Página de Termos (/terms)
+- Termos de uso detalhados
+- Suporte multilíngue
+- Índice navegável
+- Design consistente
+
+## 🎨 Design System
+
+### Cores
+- **Primary**: Slate (900, 700, 600)
+- **Background**: White/Transparent com backdrop-blur
+- **Accent**: Emerald para elementos de destaque
 
 ### Tipografia
-- **Fonte Principal**: Inter (importada do Google Fonts)
-- **Fallbacks**: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto
+- **Font**: Inter (Google Fonts)
+- **Hierarquia**: text-4xl → text-6xl para títulos
+- **Peso**: 400 (regular), 500 (medium), 600 (semibold), 700 (bold)
 
-### Modificando o Conteúdo
+### Componentes
+- **Glassmorphism**: bg-white/80 + backdrop-blur-xl
+- **Botões**: Rounded-full com hover effects
+- **Cards**: border-white/20 + shadow-xl
+- **Animações**: fadeInUp, hover transforms
 
-1. **Título Principal**: Edite o `<h1>` no arquivo `index.html`
-2. **Subtítulo**: Modifique o `<h2>` na seção hero
-3. **Manifesto**: Altere o conteúdo da seção `.manifesto`
-4. **Logo**: Substitua os arquivos de logo mantendo os mesmos nomes
+## 🌐 Internacionalização
 
-## 🔧 Integrações de Email
+O projeto suporta 3 idiomas:
+- **PT**: Português (padrão)
+- **EN**: English
+- **ES**: Español
 
-O formulário está preparado para diferentes serviços de email marketing:
+Implementado através de objetos de tradução em cada página, com seletor de idioma integrado.
 
-### Mailchimp
-```javascript
-async submitToMailchimp(email) {
-    const MAILCHIMP_URL = 'SEU_ENDPOINT_MAILCHIMP_AQUI';
-    // ... implementação
-}
-```
+## 📱 Responsividade
 
-### ConvertKit
-```javascript
-async submitToConvertKit(email) {
-    const CONVERTKIT_URL = 'SEU_ENDPOINT_CONVERTKIT_AQUI';
-    // ... implementação
-}
-```
+- **Mobile First**: Design otimizado para dispositivos móveis
+- **Breakpoints**: sm (640px), md (768px), lg (1024px), xl (1280px)
+- **Menu Mobile**: Hamburguer menu para navegação
+- **Grid Responsive**: Layout adaptativo com CSS Grid/Flexbox
 
-### Google Sheets
-```javascript
-async submitToGoogleSheets(email) {
-    const GOOGLE_SCRIPT_URL = 'SEU_SCRIPT_GOOGLE_AQUI';
-    // ... implementação
-}
-```
+## 🔧 Tecnologias
 
-## 📊 Analytics
+- **Framework**: Next.js 15.5.4
+- **React**: 19.0.0
+- **TypeScript**: 5.x
+- **Tailwind CSS**: 3.4.1
+- **Ferramentas**: ESLint, PostCSS, Turbopack
 
-### Google Analytics 4
-1. Adicione seu Measurement ID no script
-2. Descomente as linhas de gtag no `script.js`
+## 📈 SEO & Performance
 
-### Facebook Pixel
-1. Adicione o código do pixel no `<head>`
-2. Descomente as linhas de fbq no `script.js`
-
-## 🎯 SEO e Meta Tags
-
-A página inclui:
-- Meta description otimizada
-- Viewport para responsividade
-- Preconnect para Google Fonts
-- Estrutura semântica HTML5
-
-### Melhorias Recomendadas
-- Adicionar Open Graph tags
-- Implementar Schema.org structured data
-- Configurar arquivo sitemap.xml
-- Adicionar arquivo robots.txt
+- **Metadados**: Título, descrição, Open Graph, Twitter Cards
+- **Favicon**: Múltiplos tamanhos e formatos
+- **Sitemap**: Geração automática
+- **Core Web Vitals**: Otimizado para performance
+- **Lazy Loading**: Imagens carregadas sob demanda
 
 ## 🚀 Deploy
 
-### Hospedagem Estática (Recomendado)
-- **Vercel**: `vercel --prod`
-- **Netlify**: Arrastar pasta para dashboard
-- **GitHub Pages**: Configurar no repositório
-- **Surge.sh**: `surge .`
+O projeto está pronto para deploy em:
+- **Vercel** (recomendado para Next.js)
+- **Netlify**
+- **AWS**
+- **Qualquer provedor que suporte Node.js**
 
-### Hospedagem Tradicional
-- Upload via FTP dos arquivos para pasta public_html
-- Certificar que index.html está na raiz
+### Deploy na Vercel
+```bash
+npx vercel
+```
 
-## 🔒 Segurança e Privacidade
+## 🤝 Contribuição
 
-- Validação client-side e server-side
-- Sanitização de inputs
-- HTTPS obrigatório em produção
-- Conformidade com LGPD/GDPR
+1. Clone o repositório
+2. Instale as dependências: `npm install`
+3. Inicie o desenvolvimento: `npm run dev`
+4. Faça suas modificações
+5. Teste com: `npm run build`
+6. Commit e push
 
-## 📱 Testes
+## 📞 Contato
 
-### Checklist de Teste
-- [ ] Formulário funciona em todos os navegadores
-- [ ] Design responsivo em diferentes telas
-- [ ] Animações funcionam suavemente
-- [ ] Integração de email está configurada
-- [ ] Analytics estão funcionando
-- [ ] Acessibilidade testada com leitor de tela
-
-### Ferramentas Recomendadas
-- Chrome DevTools
-- Lighthouse (Performance/Acessibilidade)
-- Wave Web Accessibility Evaluator
-- GTMetrix (Performance)
-
-## 🐛 Troubleshooting
-
-### Problema: Formulário não envia
-- Verificar se a integração de email está configurada
-- Checar console do navegador para erros
-- Testar com email válido
-
-### Problema: Animações não funcionam
-- Verificar se CSS está carregando corretamente
-- Testar em navegador moderno
-- Verificar se JavaScript está habilitado
-
-### Problema: Logo não aparece
-- Verificar se arquivos SVG estão na pasta correta
-- Testar caminho relativo das imagens
-- Verificar permissões dos arquivos
-
-## 📞 Suporte
-
-Para dúvidas sobre implementação ou customização, consulte:
-- Documentação dos serviços de email marketing escolhidos
-- Guias de hospedagem da plataforma selecionada
-- Documentação do Google Analytics/Facebook Pixel
-
-## 📈 Próximos Passos
-
-1. **Configurar Integração de Email**: Escolher e configurar serviço de email marketing
-2. **Implementar Analytics**: Adicionar códigos de tracking
-3. **Otimizar SEO**: Adicionar meta tags avançadas
-4. **Testes A/B**: Testar diferentes versões do copy
-5. **Heatmap**: Implementar ferramentas como Hotjar
-6. **Chat**: Adicionar widget de chat se necessário
+**Simpius** - Simplificando a complexidade, conectando o mundo.
 
 ---
 
-**Simpius** - Seu reino intelectual, finalmente em ordem.
+*Convertido de HTML estático para Next.js profissional com React, TypeScript e design system completo.*

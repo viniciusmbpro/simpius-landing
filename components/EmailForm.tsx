@@ -42,25 +42,28 @@ export default function EmailForm() {
   };
 
   return (
-    <div className="max-w-lg mx-auto">
+    <div className="max-w-2xl mx-auto px-4">
       <form onSubmit={handleSubmit} className="mb-6">
-        <div className="bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-xl border border-slate-200 flex gap-2 transition-all duration-300 hover:shadow-2xl focus-within:ring-4 focus-within:ring-slate-900/10">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="seu-melhor@email.com"
-            required
-            disabled={isSubmitting}
-            className="flex-1 bg-transparent border-none outline-none px-6 py-4 text-slate-700 placeholder-slate-400 text-lg disabled:opacity-50"
-          />
-          <button
-            type="submit"
-            disabled={isSubmitting || !email || !isValidEmail(email)}
-            className="bg-gradient-to-r from-slate-900 to-slate-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:from-slate-800 hover:to-slate-600 hover:shadow-xl hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-slate-900/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none whitespace-nowrap"
-          >
-            {isSubmitting ? 'Enviando...' : 'Quero Acesso Antecipado'}
-          </button>
+        {/* Layout responsivo: vertical em mobile, horizontal em desktop */}
+        <div className="bg-white/90 backdrop-blur-sm p-3 rounded-2xl shadow-xl border border-slate-200 transition-all duration-300 hover:shadow-2xl focus-within:ring-4 focus-within:ring-slate-900/10">
+          <div className="flex flex-col sm:flex-row gap-3">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="seu-melhor@email.com"
+              required
+              disabled={isSubmitting}
+              className="flex-1 bg-transparent border-none outline-none px-4 py-3 text-slate-700 placeholder-slate-400 text-base sm:text-lg disabled:opacity-50 min-w-0"
+            />
+            <button
+              type="submit"
+              disabled={isSubmitting || !email || !isValidEmail(email)}
+              className="bg-gradient-to-r from-slate-900 to-slate-700 text-white px-6 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 hover:from-slate-800 hover:to-slate-600 hover:shadow-xl hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-slate-900/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none shrink-0"
+            >
+              {isSubmitting ? 'Enviando...' : 'Quero Acesso Antecipado'}
+            </button>
+          </div>
         </div>
       </form>
 
