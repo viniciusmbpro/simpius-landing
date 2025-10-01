@@ -535,11 +535,25 @@
     }
 
     /* Posicionamento dos cards no carrossel */
-    .carousel-card:nth-child(1) { transform: rotateY(0deg) translateZ(400px); }
-    .carousel-card:nth-child(2) { transform: rotateY(72deg) translateZ(400px); }
-    .carousel-card:nth-child(3) { transform: rotateY(144deg) translateZ(400px); }
-    .carousel-card:nth-child(4) { transform: rotateY(216deg) translateZ(400px); }
-    .carousel-card:nth-child(5) { transform: rotateY(288deg) translateZ(400px); }
+    .carousel-card:nth-child(1) {
+      transform: rotateY(0deg) translateZ(400px);
+    }
+
+    .carousel-card:nth-child(2) {
+      transform: rotateY(72deg) translateZ(400px);
+    }
+
+    .carousel-card:nth-child(3) {
+      transform: rotateY(144deg) translateZ(400px);
+    }
+
+    .carousel-card:nth-child(4) {
+      transform: rotateY(216deg) translateZ(400px);
+    }
+
+    .carousel-card:nth-child(5) {
+      transform: rotateY(288deg) translateZ(400px);
+    }
 
     /* Responsividade do carrossel */
     @media (max-width: 768px) {
@@ -562,11 +576,25 @@
         padding: 30px 25px;
       }
 
-      .carousel-card:nth-child(1) { transform: rotateY(0deg) translateZ(300px); }
-      .carousel-card:nth-child(2) { transform: rotateY(72deg) translateZ(300px); }
-      .carousel-card:nth-child(3) { transform: rotateY(144deg) translateZ(300px); }
-      .carousel-card:nth-child(4) { transform: rotateY(216deg) translateZ(300px); }
-      .carousel-card:nth-child(5) { transform: rotateY(288deg) translateZ(300px); }
+      .carousel-card:nth-child(1) {
+        transform: rotateY(0deg) translateZ(300px);
+      }
+
+      .carousel-card:nth-child(2) {
+        transform: rotateY(72deg) translateZ(300px);
+      }
+
+      .carousel-card:nth-child(3) {
+        transform: rotateY(144deg) translateZ(300px);
+      }
+
+      .carousel-card:nth-child(4) {
+        transform: rotateY(216deg) translateZ(300px);
+      }
+
+      .carousel-card:nth-child(5) {
+        transform: rotateY(288deg) translateZ(300px);
+      }
 
       .arrow-left {
         left: -30px;
@@ -635,20 +663,22 @@
 
           <div class="carousel-container">
             <button class="carousel-arrows arrow-left" onclick="rotateCarousel(-1)">‹</button>
-            
+
             <div class="carousel" id="carousel">
               <!-- Card 1: Procrastinação -->
               <div class="carousel-card">
                 <div class="problem-section">
                   <div class="problem-icon">😴</div>
                   <div class="problem-text">"Eu procrastino demais..."</div>
-                  <div class="problem-description">Tarefas importantes ficam para depois porque não consigo ver o valor imediato delas.</div>
+                  <div class="problem-description">Tarefas importantes ficam para depois porque não consigo ver o valor
+                    imediato delas.</div>
                 </div>
                 <div class="solution-divider"></div>
                 <div class="solution-section">
                   <div class="solution-icon">🎯</div>
                   <div class="solution-text">Mapeamento de Propósito</div>
-                  <div class="solution-description">Conectamos cada tarefa aos seus objetivos maiores, gerando energia instantânea para começar.</div>
+                  <div class="solution-description">Conectamos cada tarefa aos seus objetivos maiores, gerando energia
+                    instantânea para começar.</div>
                 </div>
               </div>
 
@@ -657,13 +687,15 @@
                 <div class="problem-section">
                   <div class="problem-icon">🔄</div>
                   <div class="problem-text">"Sempre refaço o mesmo trabalho..."</div>
-                  <div class="problem-description">Perco tempo reestudando conceitos porque não consigo reter o que aprendo.</div>
+                  <div class="problem-description">Perco tempo reestudando conceitos porque não consigo reter o que
+                    aprendo.</div>
                 </div>
                 <div class="solution-divider"></div>
                 <div class="solution-section">
                   <div class="solution-icon">🧠</div>
                   <div class="solution-text">Revisão Espaçada Inteligente</div>
-                  <div class="solution-description">Sistema baseado em neurociência que automatiza a retenção de longo prazo.</div>
+                  <div class="solution-description">Sistema baseado em neurociência que automatiza a retenção de longo
+                    prazo.</div>
                 </div>
               </div>
 
@@ -672,13 +704,15 @@
                 <div class="problem-section">
                   <div class="problem-icon">⏸️</div>
                   <div class="problem-text">"Inicio tudo, termino nada..."</div>
-                  <div class="problem-description">Sou um eterno iniciante. Começo projetos com entusiasmo mas nunca concluo.</div>
+                  <div class="problem-description">Sou um eterno iniciante. Começo projetos com entusiasmo mas nunca
+                    concluo.</div>
                 </div>
                 <div class="solution-divider"></div>
                 <div class="solution-section">
                   <div class="solution-icon">✅</div>
                   <div class="solution-text">Framework de Conclusão</div>
-                  <div class="solution-description">Estrutura que quebra projetos em marcos realizáveis, garantindo momentum até o fim.</div>
+                  <div class="solution-description">Estrutura que quebra projetos em marcos realizáveis, garantindo
+                    momentum até o fim.</div>
                 </div>
               </div>
 
@@ -687,13 +721,15 @@
                 <div class="problem-section">
                   <div class="problem-icon">🌪️</div>
                   <div class="problem-text">"Meu conhecimento é um caos..."</div>
-                  <div class="problem-description">Tenho informações espalhadas e não consigo acessá-las quando preciso.</div>
+                  <div class="problem-description">Tenho informações espalhadas e não consigo acessá-las quando preciso.
+                  </div>
                 </div>
                 <div class="solution-divider"></div>
                 <div class="solution-section">
                   <div class="solution-icon">🏰</div>
                   <div class="solution-text">Arquitetura Inteligente</div>
-                  <div class="solution-description">Organização automática que conecta ideias e cria sua base de conhecimento estruturada.</div>
+                  <div class="solution-description">Organização automática que conecta ideias e cria sua base de
+                    conhecimento estruturada.</div>
                 </div>
               </div>
 
@@ -708,7 +744,8 @@
                 <div class="solution-section">
                   <div class="solution-icon">⚖️</div>
                   <div class="solution-text">Gestão Inteligente de Carga</div>
-                  <div class="solution-description">Filtragem automática do que realmente importa, priorizando seu bem-estar mental.</div>
+                  <div class="solution-description">Filtragem automática do que realmente importa, priorizando seu
+                    bem-estar mental.</div>
                 </div>
               </div>
             </div>
@@ -744,6 +781,13 @@
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 Simpius. Todos os direitos reservados.</p>
+      <p style="margin-top: 10px; font-size: 14px;">
+        <a href="policy.html"
+          style="color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: color 0.3s ease;"
+          onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255, 255, 255, 0.7)'">
+          Política de Privacidade
+        </a>
+      </p>
     </div>
   </footer>
 
@@ -809,28 +853,28 @@
 
     function rotateCarousel(direction) {
       currentSlide += direction;
-      
+
       if (currentSlide >= totalSlides) {
         currentSlide = 0;
       } else if (currentSlide < 0) {
         currentSlide = totalSlides - 1;
       }
-      
+
       currentRotation = -currentSlide * anglePerSlide;
-      
+
       const carousel = document.getElementById('carousel');
       carousel.style.transform = `rotateY(${currentRotation}deg)`;
-      
+
       updateNavDots();
     }
 
     function goToSlide(slideIndex) {
       currentSlide = slideIndex;
       currentRotation = -currentSlide * anglePerSlide;
-      
+
       const carousel = document.getElementById('carousel');
       carousel.style.transform = `rotateY(${currentRotation}deg)`;
-      
+
       updateNavDots();
     }
 
@@ -861,7 +905,7 @@
     // Iniciar auto-rotação quando a página carrega
     window.addEventListener('load', () => {
       startAutoRotate();
-      
+
       // Pausar auto-rotação quando o usuário interage
       const carouselContainer = document.querySelector('.carousel-container');
       carouselContainer.addEventListener('mouseenter', stopAutoRotate);
@@ -884,7 +928,7 @@
     let startY = 0;
 
     const carousel = document.getElementById('carousel');
-    
+
     carousel.addEventListener('touchstart', (e) => {
       startX = e.touches[0].clientX;
       startY = e.touches[0].clientY;
@@ -894,10 +938,10 @@
     carousel.addEventListener('touchend', (e) => {
       const endX = e.changedTouches[0].clientX;
       const endY = e.changedTouches[0].clientY;
-      
+
       const diffX = startX - endX;
       const diffY = startY - endY;
-      
+
       // Verificar se é um swipe horizontal
       if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
         if (diffX > 0) {

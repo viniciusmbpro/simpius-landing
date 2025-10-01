@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade - Simpius</title>
+  <meta name="description"
+    content="Política de Privacidade do Simpius - Como coletamos, usamos e protegemos seus dados pessoais.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="msapplication-TileColor" content="#0B1F3A">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="theme-color" content="#0B1F3A">
+
+  <style>
+    /* Reset e configurações básicas */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #2d3748;
+      background: linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
+      min-height: 100vh;
+    }
+
+    /* Container principal */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    .header {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(11, 31, 58, 0.1);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo {
+      height: 50px;
+      width: auto;
+    }
+
+    .back-link {
+      color: #0B1F3A;
+      text-decoration: none;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      background: rgba(11, 31, 58, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      background: rgba(11, 31, 58, 0.1);
+      transform: translateX(-5px);
+    }
+
+    /* Seletor de idioma */
+    .language-selector {
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 8px;
+      border-radius: 30px;
+      border: 1px solid rgba(11, 31, 58, 0.1);
+    }
+
+    .lang-btn {
+      background: none;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      color: #4a5568;
+    }
+
+    .lang-btn.active {
+      background: #0B1F3A;
+      color: white;
+    }
+
+    .lang-btn:hover:not(.active) {
+      background: rgba(11, 31, 58, 0.1);
+    }
+
+    /* Conteúdo principal */
+    .main-content {
+      padding: 60px 0;
+    }
+
+    .policy-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .policy-title h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #0B1F3A;
+      margin-bottom: 16px;
+    }
+
+    .policy-title p {
+      font-size: 1.1rem;
+      color: #4a5568;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Seções de conteúdo */
+    .content-section {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    }
+
+    .content-section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0B1F3A;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(11, 31, 58, 0.1);
+    }
+
+    .content-section h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1a3a5c;
+      margin: 30px 0 15px;
+    }
+
+    .content-section p {
+      margin-bottom: 16px;
+      color: #4a5568;
+      line-height: 1.7;
+    }
+
+    .content-section ul {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    .content-section li {
+      margin-bottom: 10px;
+      color: #4a5568;
+      line-height: 1.6;
+    }
+
+    .content-section a {
+      color: #0B1F3A;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .content-section a:hover {
+      border-bottom-color: #0B1F3A;
+    }
+
+    /* Índice/Sumário */
+    .table-of-contents {
+      background: linear-gradient(135deg, #0B1F3A 0%, #1a3a5c 100%);
+      color: white;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+
+    .table-of-contents h2 {
+      color: white;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .toc-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .toc-list li {
+      margin-bottom: 10px;
+    }
+
+    .toc-list a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      display: block;
+      padding: 8px 0;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .toc-list a:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+      padding-left: 10px;
+      border-bottom: none;
+    }
+
+    /* Data de atualização */
+    .last-updated {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .last-updated p {
+      color: #059669;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    /* Rodapé */
+    .footer {
+      background: #0B1F3A;
+      color: white;
+      text-align: center;
+      padding: 40px 0;
+      margin-top: 60px;
+    }
+
+    .footer p {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .content-section {
+        padding: 25px;
+      }
+
+      .table-of-contents {
+        padding: 20px;
+      }
+
+      .language-selector {
+        order: -1;
+      }
+    }
+
+    /* Animações */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .content-section {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    /* Classes para controle de idioma */
+    .lang-content {
+      display: none;
+    }
+
+    .lang-content.active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="back-link">
+          ← Voltar ao Simpius
+        </a>
+
+        <img src="logo_simpius_v1.png" alt="Simpius" class="logo">
+
+        <div class="language-selector">
+          <button class="lang-btn active" onclick="switchLanguage('pt')" data-lang="pt">PT</button>
+          <button class="lang-btn" onclick="switchLanguage('en')" data-lang="en">EN</button>
+          <button class="lang-btn" onclick="switchLanguage('es')" data-lang="es">ES</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Título Principal -->
+      <div class="policy-title">
+        <h1 id="main-title">Política de Privacidade</h1>
+        <p id="main-description">Como coletamos, usamos e protegemos suas informações pessoais</p>
+      </div>
+
+      <!-- Índice -->
+      <div class="table-of-contents">
+        <h2 id="toc-title">Índice</h2>
+        <ul class="toc-list" id="toc-list">
+          <li><a href="#information-collection">Coleta de Informações</a></li>
+          <li><a href="#information-use">Uso das Informações</a></li>
+          <li><a href="#information-protection">Proteção de Dados</a></li>
+          <li><a href="#information-sharing">Compartilhamento</a></li>
+          <li><a href="#cookies">Cookies e Tecnologias</a></li>
+          <li><a href="#user-rights">Seus Direitos</a></li>
+          <li><a href="#user-commitment">Compromisso do Usuário</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Conteúdo em Português -->
+      <div class="lang-content active" id="content-pt">
+        <!-- Introdução -->
+        <div class="content-section">
+          <h2>Introdução</h2>
+          <p>A sua privacidade é importante para nós. É política do Simpius respeitar a sua privacidade em relação a
+            qualquer informação sua que possamos coletar no site <a href="https://simpius.com">Simpius</a>, e outros
+            sites que possuímos e operamos.</p>
+          <p>Esta política de privacidade explica como coletamos, usamos, armazenamos e protegemos suas informações
+            pessoais quando você usa nossos serviços.</p>
+        </div>
+
+        <!-- Coleta de Informações -->
+        <div class="content-section" id="information-collection">
+          <h2>Coleta de Informações</h2>
+          <p>Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço.
+            Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento.</p>
+          <h3>Informações que coletamos:</h3>
+          <ul>
+            <li><strong>Informações de contato:</strong> Nome, endereço de e-mail</li>
+            <li><strong>Informações técnicas:</strong> Endereço IP, tipo de navegador, páginas visitadas</li>
+            <li><strong>Informações de uso:</strong> Como você interage com nosso site e serviços</li>
+          </ul>
+        </div>
+
+        <!-- Uso das Informações -->
+        <div class="content-section" id="information-use">
+          <h2>Uso das Informações</h2>
+          <p>Utilizamos as informações coletadas para:</p>
+          <ul>
+            <li>Fornecer e melhorar nossos serviços</li>
+            <li>Comunicar atualizações e novidades sobre o Simpius</li>
+            <li>Responder às suas solicitações e fornecer suporte</li>
+            <li>Personalizar sua experiência em nosso site</li>
+            <li>Cumprir obrigações legais e regulamentares</li>
+          </ul>
+        </div>
+
+        <!-- Proteção de Dados -->
+        <div class="content-section" id="information-protection">
+          <h2>Proteção de Dados</h2>
+          <p>Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando
+            armazenamos dados, protegemos dentro de meios comercialmente aceitáveis para evitar perdas e roubos, bem
+            como acesso, divulgação, cópia, uso ou modificação não autorizados.</p>
+          <p>Implementamos medidas de segurança técnicas e organizacionais apropriadas para proteger suas informações
+            pessoais.</p>
+        </div>
+
+        <!-- Compartilhamento -->
+        <div class="content-section" id="information-sharing">
+          <h2>Compartilhamento de Informações</h2>
+          <p>Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando:</p>
+          <ul>
+            <li>Exigido por lei ou processo legal</li>
+            <li>Necessário para proteger nossos direitos ou propriedade</li>
+            <li>Com seu consentimento explícito</li>
+            <li>Com prestadores de serviços que nos auxiliam (sob acordos de confidencialidade)</li>
+          </ul>
+        </div>
+
+        <!-- Cookies -->
+        <div class="content-section" id="cookies">
+          <h2>Cookies e Tecnologias Similares</h2>
+          <p>Utilizamos cookies e tecnologias similares para melhorar sua experiência em nosso site:</p>
+          <ul>
+            <li><strong>Cookies essenciais:</strong> Necessários para o funcionamento básico do site</li>
+            <li><strong>Cookies de análise:</strong> Para entender como você usa nosso site</li>
+            <li><strong>Cookies de personalização:</strong> Para lembrar suas preferências</li>
+          </ul>
+          <p>Você pode controlar o uso de cookies através das configurações do seu navegador.</p>
+        </div>
+
+        <!-- Direitos do Usuário -->
+        <div class="content-section" id="user-rights">
+          <h2>Seus Direitos</h2>
+          <p>Você tem os seguintes direitos em relação aos seus dados pessoais:</p>
+          <ul>
+            <li><strong>Acesso:</strong> Solicitar informações sobre os dados que temos sobre você</li>
+            <li><strong>Correção:</strong> Solicitar a correção de dados incorretos ou incompletos</li>
+            <li><strong>Exclusão:</strong> Solicitar a exclusão de seus dados pessoais</li>
+            <li><strong>Portabilidade:</strong> Solicitar uma cópia de seus dados em formato legível</li>
+            <li><strong>Oposição:</strong> Opor-se ao processamento de seus dados para determinadas finalidades</li>
+          </ul>
+        </div>
+
+        <!-- Compromisso do Usuário -->
+        <div class="content-section" id="user-commitment">
+          <h2>Compromisso do Usuário</h2>
+          <p>O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Simpius oferece no site e
+            com caráter enunciativo, mas não limitativo:</p>
+          <ul>
+            <li>Não se envolver em atividades que sejam ilegais ou contrárias à boa fé e à ordem pública</li>
+            <li>Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, jogos de sorte ou azar, qualquer
+              tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos</li>
+            <li>Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do Simpius, de seus fornecedores
+              ou terceiros</li>
+          </ul>
+        </div>
+
+        <!-- Contato -->
+        <div class="content-section" id="contact">
+          <h2>Contato</h2>
+          <p>Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em
+            contato conosco através do e-mail: <a href="mailto:privacy@simpius.com">privacy@simpius.com</a></p>
+          <p>Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos
+            fornecer alguns dos serviços desejados.</p>
+        </div>
+      </div>
+
+      <!-- Conteúdo em Inglês -->
+      <div class="lang-content" id="content-en">
+        <!-- Introduction -->
+        <div class="content-section">
+          <h2>Introduction</h2>
+          <p>Your privacy is important to us. It is Simpius's policy to respect your privacy regarding any information
+            we may collect from the <a href="https://simpius.com">Simpius</a> website, and other sites we own and
+            operate.</p>
+          <p>This privacy policy explains how we collect, use, store and protect your personal information when you use
+            our services.</p>
+        </div>
+
+        <!-- Information Collection -->
+        <div class="content-section" id="information-collection">
+          <h2>Information Collection</h2>
+          <p>We only ask for personal information when we truly need it to provide you with a service. We do it by fair
+            and lawful means, with your knowledge and consent.</p>
+          <h3>Information we collect:</h3>
+          <ul>
+            <li><strong>Contact information:</strong> Name, email address</li>
+            <li><strong>Technical information:</strong> IP address, browser type, pages visited</li>
+            <li><strong>Usage information:</strong> How you interact with our website and services</li>
+          </ul>
+        </div>
+
+        <!-- Information Use -->
+        <div class="content-section" id="information-use">
+          <h2>Use of Information</h2>
+          <p>We use the collected information to:</p>
+          <ul>
+            <li>Provide and improve our services</li>
+            <li>Communicate updates and news about Simpius</li>
+            <li>Respond to your requests and provide support</li>
+            <li>Personalize your experience on our website</li>
+            <li>Comply with legal and regulatory obligations</li>
+          </ul>
+        </div>
+
+        <!-- Data Protection -->
+        <div class="content-section" id="information-protection">
+          <h2>Data Protection</h2>
+          <p>We only retain collected information for as long as necessary to provide you with the requested service.
+            When we store data, we protect it within commercially acceptable means to prevent loss and theft, as well as
+            unauthorized access, disclosure, copying, use or modification.</p>
+          <p>We implement appropriate technical and organizational security measures to protect your personal
+            information.</p>
+        </div>
+
+        <!-- Information Sharing -->
+        <div class="content-section" id="information-sharing">
+          <h2>Information Sharing</h2>
+          <p>We don't share personally identifying information publicly or with third-parties, except when:</p>
+          <ul>
+            <li>Required by law or legal process</li>
+            <li>Necessary to protect our rights or property</li>
+            <li>With your explicit consent</li>
+            <li>With service providers who assist us (under confidentiality agreements)</li>
+          </ul>
+        </div>
+
+        <!-- Cookies -->
+        <div class="content-section" id="cookies">
+          <h2>Cookies and Similar Technologies</h2>
+          <p>We use cookies and similar technologies to improve your experience on our website:</p>
+          <ul>
+            <li><strong>Essential cookies:</strong> Necessary for basic website functionality</li>
+            <li><strong>Analytics cookies:</strong> To understand how you use our website</li>
+            <li><strong>Personalization cookies:</strong> To remember your preferences</li>
+          </ul>
+          <p>You can control cookie usage through your browser settings.</p>
+        </div>
+
+        <!-- User Rights -->
+        <div class="content-section" id="user-rights">
+          <h2>Your Rights</h2>
+          <p>You have the following rights regarding your personal data:</p>
+          <ul>
+            <li><strong>Access:</strong> Request information about the data we have about you</li>
+            <li><strong>Correction:</strong> Request correction of incorrect or incomplete data</li>
+            <li><strong>Deletion:</strong> Request deletion of your personal data</li>
+            <li><strong>Portability:</strong> Request a copy of your data in a readable format</li>
+            <li><strong>Objection:</strong> Object to the processing of your data for certain purposes</li>
+          </ul>
+        </div>
+
+        <!-- User Commitment -->
+        <div class="content-section" id="user-commitment">
+          <h2>User Commitment</h2>
+          <p>The user agrees to make appropriate use of the content and information that Simpius offers on the site,
+            including but not limited to:</p>
+          <ul>
+            <li>Not engaging in activities that are illegal or contrary to good faith and public order</li>
+            <li>Not disseminating propaganda or content of a racist, xenophobic nature, gambling, any type of illegal
+              pornography, terrorism advocacy or against human rights</li>
+            <li>Not causing damage to physical (hardware) and logical (software) systems of Simpius, its suppliers or
+              third parties</li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="content-section" id="contact">
+          <h2>Contact</h2>
+          <p>If you have any questions about how we handle user data and personal information, please contact us at: <a
+              href="mailto:privacy@simpius.com">privacy@simpius.com</a></p>
+          <p>You are free to refuse our request for personal information, understanding that we may not be able to
+            provide some of the desired services.</p>
+        </div>
+      </div>
+
+      <!-- Conteúdo em Espanhol -->
+      <div class="lang-content" id="content-es">
+        <!-- Introducción -->
+        <div class="content-section">
+          <h2>Introducción</h2>
+          <p>Su privacidad es importante para nosotros. Es política de Simpius respetar su privacidad con respecto a
+            cualquier información que podamos recopilar del sitio web <a href="https://simpius.com">Simpius</a>, y otros
+            sitios que poseemos y operamos.</p>
+          <p>Esta política de privacidad explica cómo recopilamos, usamos, almacenamos y protegemos su información
+            personal cuando utiliza nuestros servicios.</p>
+        </div>
+
+        <!-- Recopilación de Información -->
+        <div class="content-section" id="information-collection">
+          <h2>Recopilación de Información</h2>
+          <p>Solo solicitamos información personal cuando realmente la necesitamos para brindarle un servicio. Lo
+            hacemos por medios justos y legales, con su conocimiento y consentimiento.</p>
+          <h3>Información que recopilamos:</h3>
+          <ul>
+            <li><strong>Información de contacto:</strong> Nombre, dirección de correo electrónico</li>
+            <li><strong>Información técnica:</strong> Dirección IP, tipo de navegador, páginas visitadas</li>
+            <li><strong>Información de uso:</strong> Cómo interactúa con nuestro sitio web y servicios</li>
+          </ul>
+        </div>
+
+        <!-- Uso de la Información -->
+        <div class="content-section" id="information-use">
+          <h2>Uso de la Información</h2>
+          <p>Utilizamos la información recopilada para:</p>
+          <ul>
+            <li>Proporcionar y mejorar nuestros servicios</li>
+            <li>Comunicar actualizaciones y noticias sobre Simpius</li>
+            <li>Responder a sus solicitudes y brindar soporte</li>
+            <li>Personalizar su experiencia en nuestro sitio web</li>
+            <li>Cumplir con las obligaciones legales y regulatorias</li>
+          </ul>
+        </div>
+
+        <!-- Protección de Datos -->
+        <div class="content-section" id="information-protection">
+          <h2>Protección de Datos</h2>
+          <p>Solo retenemos la información recopilada durante el tiempo necesario para brindarle el servicio solicitado.
+            Cuando almacenamos datos, los protegemos dentro de medios comercialmente aceptables para prevenir pérdidas y
+            robos, así como acceso, divulgación, copia, uso o modificación no autorizados.</p>
+          <p>Implementamos medidas de seguridad técnicas y organizacionales apropiadas para proteger su información
+            personal.</p>
+        </div>
+
+        <!-- Compartir Información -->
+        <div class="content-section" id="information-sharing">
+          <h2>Compartir Información</h2>
+          <p>No compartimos información de identificación personal públicamente o con terceros, excepto cuando:</p>
+          <ul>
+            <li>Sea requerido por ley o proceso legal</li>
+            <li>Sea necesario para proteger nuestros derechos o propiedad</li>
+            <li>Con su consentimiento explícito</li>
+            <li>Con proveedores de servicios que nos asisten (bajo acuerdos de confidencialidad)</li>
+          </ul>
+        </div>
+
+        <!-- Cookies -->
+        <div class="content-section" id="cookies">
+          <h2>Cookies y Tecnologías Similares</h2>
+          <p>Utilizamos cookies y tecnologías similares para mejorar su experiencia en nuestro sitio web:</p>
+          <ul>
+            <li><strong>Cookies esenciales:</strong> Necesarias para la funcionalidad básica del sitio web</li>
+            <li><strong>Cookies de análisis:</strong> Para entender cómo usa nuestro sitio web</li>
+            <li><strong>Cookies de personalización:</strong> Para recordar sus preferencias</li>
+          </ul>
+          <p>Puede controlar el uso de cookies a través de la configuración de su navegador.</p>
+        </div>
+
+        <!-- Derechos del Usuario -->
+        <div class="content-section" id="user-rights">
+          <h2>Sus Derechos</h2>
+          <p>Tiene los siguientes derechos con respecto a sus datos personales:</p>
+          <ul>
+            <li><strong>Acceso:</strong> Solicitar información sobre los datos que tenemos sobre usted</li>
+            <li><strong>Corrección:</strong> Solicitar la corrección de datos incorrectos o incompletos</li>
+            <li><strong>Eliminación:</strong> Solicitar la eliminación de sus datos personales</li>
+            <li><strong>Portabilidad:</strong> Solicitar una copia de sus datos en formato legible</li>
+            <li><strong>Oposición:</strong> Oponerse al procesamiento de sus datos para ciertos propósitos</li>
+          </ul>
+        </div>
+
+        <!-- Compromiso del Usuario -->
+        <div class="content-section" id="user-commitment">
+          <h2>Compromiso del Usuario</h2>
+          <p>El usuario se compromete a hacer un uso adecuado del contenido e información que Simpius ofrece en el
+            sitio, incluyendo pero no limitado a:</p>
+          <ul>
+            <li>No participar en actividades que sean ilegales o contrarias a la buena fe y el orden público</li>
+            <li>No difundir propaganda o contenido de naturaleza racista, xenófoba, juegos de azar, cualquier tipo de
+              pornografía ilegal, apología del terrorismo o contra los derechos humanos</li>
+            <li>No causar daños a los sistemas físicos (hardware) y lógicos (software) de Simpius, sus proveedores o
+              terceros</li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="content-section" id="contact">
+          <h2>Contacto</h2>
+          <p>Si tiene alguna pregunta sobre cómo manejamos los datos del usuario e información personal, póngase en
+            contacto con nosotros en: <a href="mailto:privacy@simpius.com">privacy@simpius.com</a></p>
+          <p>Es libre de rechazar nuestra solicitud de información personal, entendiendo que es posible que no podamos
+            proporcionar algunos de los servicios deseados.</p>
+        </div>
+      </div>
+
+      <!-- Data de Atualização -->
+      <div class="last-updated">
+        <p id="last-updated-text">Esta política é efetiva a partir de 1 de outubro de 2025</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Simpius. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Controle de idiomas
+    const translations = {
+      pt: {
+        mainTitle: "Política de Privacidade",
+        mainDescription: "Como coletamos, usamos e protegemos suas informações pessoais",
+        tocTitle: "Índice",
+        lastUpdated: "Esta política é efetiva a partir de 1 de outubro de 2025",
+        backLink: "← Voltar ao Simpius"
+      },
+      en: {
+        mainTitle: "Privacy Policy",
+        mainDescription: "How we collect, use and protect your personal information",
+        tocTitle: "Table of Contents",
+        lastUpdated: "This policy is effective as of October 1, 2025",
+        backLink: "← Back to Simpius"
+      },
+      es: {
+        mainTitle: "Política de Privacidad",
+        mainDescription: "Cómo recopilamos, usamos y protegemos su información personal",
+        tocTitle: "Índice",
+        lastUpdated: "Esta política es efectiva a partir del 1 de octubre de 2025",
+        backLink: "← Volver a Simpius"
+      }
+    };
+
+    const tocTranslations = {
+      pt: {
+        "information-collection": "Coleta de Informações",
+        "information-use": "Uso das Informações",
+        "information-protection": "Proteção de Dados",
+        "information-sharing": "Compartilhamento",
+        "cookies": "Cookies e Tecnologias",
+        "user-rights": "Seus Direitos",
+        "user-commitment": "Compromisso do Usuário",
+        "contact": "Contato"
+      },
+      en: {
+        "information-collection": "Information Collection",
+        "information-use": "Use of Information",
+        "information-protection": "Data Protection",
+        "information-sharing": "Information Sharing",
+        "cookies": "Cookies and Technologies",
+        "user-rights": "Your Rights",
+        "user-commitment": "User Commitment",
+        "contact": "Contact"
+      },
+      es: {
+        "information-collection": "Recopilación de Información",
+        "information-use": "Uso de la Información",
+        "information-protection": "Protección de Datos",
+        "information-sharing": "Compartir Información",
+        "cookies": "Cookies y Tecnologías",
+        "user-rights": "Sus Derechos",
+        "user-commitment": "Compromiso del Usuario",
+        "contact": "Contacto"
+      }
+    };
+
+    function switchLanguage(lang) {
+      // Atualizar conteúdo principal
+      document.querySelectorAll('.lang-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      document.getElementById(`content-${lang}`).classList.add('active');
+
+      // Atualizar botões de idioma
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+
+      // Atualizar textos traduzidos
+      const translation = translations[lang];
+      document.getElementById('main-title').textContent = translation.mainTitle;
+      document.getElementById('main-description').textContent = translation.mainDescription;
+      document.getElementById('toc-title').textContent = translation.tocTitle;
+      document.getElementById('last-updated-text').textContent = translation.lastUpdated;
+      document.querySelector('.back-link').textContent = translation.backLink;
+
+      // Atualizar índice
+      const tocItems = tocTranslations[lang];
+      const tocList = document.getElementById('toc-list');
+      const links = tocList.querySelectorAll('a');
+      links.forEach(link => {
+        const href = link.getAttribute('href').substring(1); // Remove #
+        if (tocItems[href]) {
+          link.textContent = tocItems[href];
+        }
+      });
+
+      // Atualizar atributo lang do HTML
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang === 'en' ? 'en' : 'es';
+    }
+
+    // Smooth scroll para links do índice
+    document.querySelectorAll('.toc-list a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Detectar idioma do navegador
+    function detectBrowserLanguage() {
+      const browserLang = navigator.language || navigator.userLanguage;
+      if (browserLang.startsWith('pt')) {
+        return 'pt';
+      } else if (browserLang.startsWith('es')) {
+        return 'es';
+      } else {
+        return 'en';
+      }
+    }
+
+    // Inicializar com idioma do navegador
+    document.addEventListener('DOMContentLoaded', function () {
+      const defaultLang = detectBrowserLanguage();
+      if (defaultLang !== 'pt') {
+        switchLanguage(defaultLang);
+      }
+    });
+
+    // Animação suave ao carregar
+    window.addEventListener('load', function () {
+      document.body.style.opacity = '1';
+    });
+  </script>
+</body>
+
+</html>
